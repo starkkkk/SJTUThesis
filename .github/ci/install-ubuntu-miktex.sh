@@ -9,21 +9,21 @@ echo "deb ${REPO}/setup/deb/ bionic universe" | sudo tee /etc/apt/sources.list.d
 sudo apt-get update -qq
 sudo apt-get install -y --no-install-recommends ghostscript miktex
 
+# Finish the setup
 sudo miktexsetup finish
 sudo initexmf --admin --set-config-value=[MPM]AutoInstall=1
+sudo mpm --admin --set-repository=$REPO/tm/packages/
 sudo mpm --admin --update-db
 sudo initexmf --admin --update-fndb
 
+# Set user-specific TEXMF root directories
 export MIKTEX_USERCONFIG=$HOME/.miktex/texmfs/config
 export MIKTEX_USERDATA=$HOME/.miktex/texmfs/data
 export MIKTEX_USERINSTALL=$HOME/.miktex/texmfs/install
 
-# Refresh the whole file name database
-initexmf --update-fndb --verbose
+# Synchronize user-specific databases
+mpm --update-db
+initexmf --update-fndb
 
 # Update MiKTeX
-mpm --set-repository=$REPO/tm/packages/
 mpm --update --verbose
-
-# Refresh the whole file name database again
-initexmf --update-fndb --verbose

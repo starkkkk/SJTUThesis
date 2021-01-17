@@ -8,7 +8,6 @@ matrix:
       cache:
         directories:
           - /tmp/texlive
-          - $HOME/.texlive
     - install: source .github/ci/install-ubuntu-miktex.sh
       cache:
         directories:

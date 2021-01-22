@@ -32,6 +32,7 @@ tlmgr install           \
   environ               \
   eso-pic               \
   etoolbox              \
+  everysel              \
   fandol                \
   filehook              \
   fontspec              \
@@ -41,8 +42,8 @@ tlmgr install           \
   latexmk               \
   listings              \
   logreq                \
-  ms                    \
   multirow              \
+  newtx                 \
   ntheorem              \
   pageslts              \
   pdflscape             \
@@ -51,8 +52,6 @@ tlmgr install           \
   relsize               \
   silence               \
   siunitx               \
-  sourcecodepro         \
-  sourcesanspro         \
   tex-gyre              \
   threeparttable        \
   tocloft               \
@@ -64,7 +63,6 @@ tlmgr install           \
   xcolor                \
   xecjk                 \
   xetex                 \
-  xits                  \
   xkeyval               \
   xstring               \
   zhnumber

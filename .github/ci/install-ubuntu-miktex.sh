@@ -26,4 +26,5 @@ mpm --update-db
 initexmf --update-fndb
 
 # Update MiKTeX
+sudo mpm --admin --update --verbose
 mpm --update --verbose
